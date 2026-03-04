@@ -2,6 +2,27 @@
 
 AI execution control layer for bounded, auditable autonomy.
 
+## Current Operating Direction (2026-03-04)
+
+- Private-only internal operator platform.
+- Reliability-first execution lane.
+- Fail-closed autonomy posture.
+- Expansion-track work remains frozen until reliability stability criteria are met.
+
+## Non-Negotiable Policy (Locked)
+
+- No internet-public endpoints.
+- No direct public port exposure.
+- No public ingress proxy endpoints in normal operations.
+- Remote access is private-path only (loopback plus trusted tunnel paths).
+- Any exposure signal fails the active reliability cycle.
+
+## Stability Gate (Reliability Gate Cycle)
+
+- AEI gates execution by cycle evidence across network exposure, Tier-0 access (RDP/API/Web), endpoint profile, runtime health, desktop reliability, evidence integrity, and streak ledger.
+- Expansion freeze stays active until 20 consecutive green cycles are recorded.
+- Any failed gate or manual Tier-0 recovery resets the consecutive-green streak to 0.
+
 ## What AEI Is (And Is Not)
 
 AEI is an execution control layer for AI-enabled systems. It governs how actions are authorized, bounded, and reviewed before side effects occur.
@@ -51,7 +72,11 @@ AEI defines the execution governance layer for AI systems: a control framework b
 
 ## Availability, Contact, and Licensing
 
-AEI public materials are actively evolving. For collaboration or updates, open an issue in this repository.
+This repository intentionally contains public-facing project context only.
+
+Operational code, infrastructure, runtime interfaces, and deployment controls are maintained in private environments.
+
+For collaboration or updates, open an issue in this repository.
 
 Licensing details are maintained in the repository license file.
 

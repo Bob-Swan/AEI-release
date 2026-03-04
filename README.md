@@ -91,6 +91,10 @@ AEI defines the execution governance layer for AI systems: a control framework b
 - Fail-closed behavior when enforcement certainty is low.
 - Audit-oriented traceability for execution decisions.
 
+## Public Documentation
+
+- Public docs index: `docs/public/PUBLIC_DOCS_INDEX_2026-03-04.md`
+
 ## Availability, Contact, and Licensing
 
 This repository intentionally contains public-facing project context only.

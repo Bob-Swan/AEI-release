@@ -23,6 +23,27 @@ AI execution control layer for bounded, auditable autonomy.
 - Expansion freeze stays active until 20 consecutive green cycles are recorded.
 - Any failed gate or manual Tier-0 recovery resets the consecutive-green streak to 0.
 
+## Primary Deployment Model (Current)
+
+AEI is operated as a local, private, operator-controlled safety governor for its own system environment.
+
+## Core Invariant
+
+Nothing with side effects occurs unless AEI explicitly authorizes the action.
+
+## Operational Planes (High-Level)
+
+- Control plane: operator authority, trust state visibility, approve/deny flow.
+- Decision plane: policy evaluation and risk classification before execution.
+- Execution plane: side-effect operations run through controlled broker paths.
+- Evidence plane: append-only decision and execution evidence for auditability.
+
+## Proof Gates (Behavior Expectations)
+
+- Forbidden action attempt: denied and recorded.
+- Allowed read-only action: authorized and recorded with output evidence.
+- Dangerous action: blocked unless explicit operator override, with full decision trail.
+
 ## What AEI Is (And Is Not)
 
 AEI is an execution control layer for AI-enabled systems. It governs how actions are authorized, bounded, and reviewed before side effects occur.
